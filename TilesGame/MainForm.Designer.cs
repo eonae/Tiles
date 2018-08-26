@@ -1,4 +1,4 @@
-﻿namespace TilesGame
+﻿namespace TilesGame.View
 {
     partial class MainForm
     {

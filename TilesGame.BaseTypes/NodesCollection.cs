@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TilesGame
+namespace TilesGame.BaseTypes
 {
     public class NodesCollection : ElementsCollection<Node>
     {

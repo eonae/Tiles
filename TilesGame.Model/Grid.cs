@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Drawing;
-using System.Collections.Generic;
+using TilesGame.BaseTypes;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace TilesGame
+
+namespace TilesGame.Model
 {
-    public class Grid
+    public class Grid : IGrid
     {
-        public readonly Model ModelRef;
-        public readonly NodesCollection Nodes= new NodesCollection();
-        public readonly Point Position;     // Положение левого верхнего угла сетки.
+        public readonly Game GameRef;
+        public NodesCollection Nodes { get; set; } = new NodesCollection(); // Открытый, чтобы интерфейс!
+        public Point Position { get; set; }     // Положение левого верхнего угла сетки.
         public readonly Size Dimention; // Размерность сетки
         public Size CellSize { get; set; }  // Размер одной ячейки
         public Node ActiveNode { get; set; }
 
-        public Grid(Model model, Size dimention, Size cellSize, Point position)
+        public Grid(Game game, Size dimention, Size cellSize, Point position)
         {
             // Нужно добавить проверки: размер не слишком маленький dimention не менее, чем 1,1
 
-            ModelRef = model;
+            GameRef = game;
             CellSize = cellSize;
             Position = position;
             Dimention = dimention;
@@ -39,7 +38,7 @@ namespace TilesGame
 
         private Node GetNearestNode(Point pt)
         {
-            double min_dist = Nodes.Except(ModelRef.TileManager.Tiles.Select(t => t.DockedTo)).Min(n => n.GetDistanceExt(pt));
+            double min_dist = Nodes.Except(GameRef.TileManager.Tiles.Select(t => t.DockedTo)).Min(n => n.GetDistanceExt(pt));
             return Nodes.Where(n => n.GetDistanceExt(pt) == min_dist).Take(1).Single();
         }
         private double GetDistance(Point A, Point B)

@@ -1,31 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Drawing;
-using System.Text;
-using System.Threading.Tasks;
+using System.Linq;
+using TilesGame.BaseTypes;
 
-namespace TilesGame
+namespace TilesGame.Model
 {
     public class TileManager
     {
-        public Model ModelRef { get; private set; }
+        public Game GameRef { get; private set; }
         public TilesCollection Tiles { get; set; } = new TilesCollection();
         public Tile ActiveTile { get; set; }
         public bool NoActiveTile { get { return ActiveTile == null; } }
 
-        public TileManager(Model model, int numberOfTiles)
+        public TileManager(Game game, int numberOfTiles)
         {
-            ModelRef = model;
-            if (numberOfTiles >= ModelRef.Grid.Nodes.Count || numberOfTiles<0)
+            GameRef = game;
+            if (numberOfTiles >= GameRef.Grid.Nodes.Count || numberOfTiles<0)
                 throw new Exception("Invalid number of tiles!");
 
-            var nodes = (IEnumerable<Node>)ModelRef.Grid.Nodes;
+            var nodes = (IEnumerable<Node>)GameRef.Grid.Nodes;
             for (int i =0; i < numberOfTiles; i++)
             {
                 var result = nodes.RandomElementExclude();
                 nodes = result.NewCollection;
-                Tiles.Add(new Tile(new Size(50, 50), ModelRef.Grid, result.Element));
+                Tiles.Add(new Tile(new Size(50, 50), GameRef.Grid, result.Element));
             }
         }
 
@@ -40,7 +39,7 @@ namespace TilesGame
         }
         public void DropTile(Point mousePosition)
         {
-            ActiveTile.DockToNode(ModelRef.Grid.ActiveNode);
+            ActiveTile.DockToNode(GameRef.Grid.ActiveNode);
             ActiveTile.State = TileState.Normal;
             ActiveTile = null;
         }

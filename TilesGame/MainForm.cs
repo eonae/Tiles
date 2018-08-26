@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TilesGame
+namespace TilesGame.View
 {
     public partial class MainForm : Form
     {
@@ -18,6 +18,8 @@ namespace TilesGame
             InitializeComponent();
             base.BackColor = Color.White;
             DoubleBuffered = true;
+
+
         }
     }
 }

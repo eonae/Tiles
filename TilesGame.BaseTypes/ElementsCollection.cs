@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TilesGame
+namespace TilesGame.BaseTypes
 {
     public abstract class ElementsCollection<T> : ICollection<T>
     {

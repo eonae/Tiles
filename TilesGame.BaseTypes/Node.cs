@@ -5,15 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
 
-namespace TilesGame
+namespace TilesGame.BaseTypes
 {
     public class Node // Узел сетки
     {
-        public readonly Grid GridReference;
+        public readonly IGrid GridReference;
         public readonly (int X, int Y) Index; // Позиция (индексы) в массиве сетки.
         public Point AbsPosition { get; private set; } // Вычисляемое значение, которое не меняется в ходе выполнения программы.
 
-        public Node(Grid grid, (int x, int y) index)
+        public Node(IGrid grid, (int x, int y) index)
         {
             GridReference = grid;
             Index = index;

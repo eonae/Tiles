@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 
 
-namespace TilesGame
+namespace TilesGame.BaseTypes
 {
     public enum MouseButtons { None, Left, Right}
 

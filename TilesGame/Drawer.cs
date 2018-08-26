@@ -4,8 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing;
+using TilesGame.BaseTypes;
 
-namespace TilesGame
+namespace TilesGame.View
 {
     public static class Drawer
     {
@@ -44,7 +45,7 @@ namespace TilesGame
             DrawHelper(g, tile, style);
         }
 
-        public static void DrawGrid(Graphics g, Grid grid)
+        public static void DrawGrid(Graphics g, IGrid grid)
         {
             foreach (var node in grid.Nodes)
                 if (node != grid.ActiveNode)

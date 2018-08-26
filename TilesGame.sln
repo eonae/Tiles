@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGame", "TilesGame\TilesGame.csproj", "{F713D719-2963-4432-BFC0-3DD7A72B0150}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGame.View", "TilesGame\TilesGame.View.csproj", "{F713D719-2963-4432-BFC0-3DD7A72B0150}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGameLib", "TilesGameLib\TilesGameLib.csproj", "{22A7B4DC-1EB4-4D36-9F73-F390E8621280}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGame.Model", "TilesGame.Model\TilesGame.Model.csproj", "{3FF2A88F-20A9-44ED-A153-0E3BC83788FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGame.Controller", "TilesGame.Controller\TilesGame.Controller.csproj", "{1ED435A5-5638-48DB-B365-A6FD13CD9744}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TilesGame.BaseTypes", "TilesGame.BaseTypes\TilesGame.BaseTypes.csproj", "{F634E506-E595-486B-BB41-5186E561A058}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +21,18 @@ Global
 		{F713D719-2963-4432-BFC0-3DD7A72B0150}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F713D719-2963-4432-BFC0-3DD7A72B0150}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F713D719-2963-4432-BFC0-3DD7A72B0150}.Release|Any CPU.Build.0 = Release|Any CPU
-		{22A7B4DC-1EB4-4D36-9F73-F390E8621280}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{22A7B4DC-1EB4-4D36-9F73-F390E8621280}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{22A7B4DC-1EB4-4D36-9F73-F390E8621280}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{22A7B4DC-1EB4-4D36-9F73-F390E8621280}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3FF2A88F-20A9-44ED-A153-0E3BC83788FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3FF2A88F-20A9-44ED-A153-0E3BC83788FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3FF2A88F-20A9-44ED-A153-0E3BC83788FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3FF2A88F-20A9-44ED-A153-0E3BC83788FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1ED435A5-5638-48DB-B365-A6FD13CD9744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1ED435A5-5638-48DB-B365-A6FD13CD9744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1ED435A5-5638-48DB-B365-A6FD13CD9744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1ED435A5-5638-48DB-B365-A6FD13CD9744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F634E506-E595-486B-BB41-5186E561A058}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F634E506-E595-486B-BB41-5186E561A058}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F634E506-E595-486B-BB41-5186E561A058}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F634E506-E595-486B-BB41-5186E561A058}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

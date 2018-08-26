@@ -1,6 +1,6 @@
 ﻿using System.Drawing;
 
-namespace TilesGame
+namespace TilesGame.BaseTypes
 {
     public enum TileState { Normal, Hovered, Dragged }
 
@@ -8,11 +8,11 @@ namespace TilesGame
     {
         public Point Position { get; set; } // Позиция центральной точки
         public readonly Size Size;
-        public readonly Grid GridReference;
+        public readonly IGrid GridReference;
         public TileState State { get; set; }
         public Node DockedTo { get; private set; }
 
-        public Tile(Size size, Grid gridRef, Node node)
+        public Tile(Size size, IGrid gridRef, Node node)
         {
             Size = size;
             GridReference = gridRef;

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace TilesGame
+namespace TilesGame.View
 {
     static class Program
     {
@@ -24,11 +24,6 @@ namespace TilesGame
             Form = new MainForm();
             Model = new Model();
             Controller = new Controller(Model, Form);
-            Form.Paint += Controller.Paint;
-
-            Form.MouseMove += Controller.MouseMove;
-            Form.MouseDown += Controller.MouseDown;
-            Form.MouseUp += Controller.MouseUp;
 
             Application.Run(Form);
         }
